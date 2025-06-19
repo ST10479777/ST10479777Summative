@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
 
         <EditText
             android:id="@+id/SongTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter song title" />
+            android:hint="Enter song title"
+            android:inputType="text"
+            android:padding="12dp"
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/ArtistName"
@@ -32,21 +36,30 @@
 
         <Button
             android:id="@+id/AddBtn"
-            android:text="Add to Packing List"
+            android:text="Add to Playlist"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3F51B5"
+            android:layout_marginTop="16dp"/>
 
         <Button
             android:id="@+id/ViewListBtn"
-            android:text="View Packing List"
+            android:text="View Playlist"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="#55F321"
+            android:textColor="#FFFF"
+            android:layout_marginTop="8dp"/>
 
     <Button
         android:id="@+id/ExitBtn"
         android:text="Exit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFF"
+        android:layout_marginTop="4dp"/>
 
 
     </LinearLayout>

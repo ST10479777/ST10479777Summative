@@ -8,16 +8,23 @@
     <TextView
         android:id="@+id/DisplayTxt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="#000000"/>
     <Button
         android:id="@+id/RatingBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rating" />
+        android:text="Rating"
+        android:backgroundTint="#E5FF3B"
+        android:textColor="#0D0101"/>
 
     <Button
         android:id="@+id/BackBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back to main" />
+        android:text="Back to main"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFF"
+        android:layout_marginTop="4dp"/>
 </LinearLayout>
