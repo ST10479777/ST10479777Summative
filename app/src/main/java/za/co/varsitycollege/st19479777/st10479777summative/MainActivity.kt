@@ -1,5 +1,6 @@
 package za.co.varsitycollege.st19479777.st10479777summative
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val rating = ArrayList<String>()
         val comment = ArrayList<String>()
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,25 +38,36 @@ class MainActivity : AppCompatActivity() {
             val rate = rateTxt.text.toString()
             val comments = commentsTxt.text.toString()
 
-            if (title.isEmpty() || name.isEmpty() || rate.isEmpty ()) {
+            if (title.isEmpty() || name.isEmpty() || rate.isEmpty()) {
                 Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show()
-                } else {
-                    val commentTxt = comments.toIntOrNull()
-                if (commentTxt == null  || commentTxt < 0 || commentTxt > 5) {
+            } else {
+                val commentTxt = comments.toIntOrNull()
+                if (commentTxt == null || commentTxt < 0 || commentTxt > 5) {
                     Toast.makeText(this, "Please enter valid rating", Toast.LENGTH_SHORT).show()
 
-            } else {
-                song.add(title)
-                artist.add(name)
-                rating.add(rate)
-                comment.add(comments)
-                    Toast.makeText(this, "Options have been added to playlist", Toast.LENGTH_SHORT).show()
+                } else {
+                    song.add(title)
+                    artist.add(name)
+                    rating.add(rate)
+                    comment.add(comments)
+                    Toast.makeText(this, "Options have been added to playlist", Toast.LENGTH_SHORT)
+                        .show()
 
+                    titleTxt.text.clear()
+                    nameTxt.text.clear()
+                    rateTxt.text.clear()
+                    commentsTxt.text.clear()
 
                 }
-
+            }
+        }
+        view.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
 
-
+        exit.setOnClickListener {
+            finishAffinity()
+        }
     }
 }
