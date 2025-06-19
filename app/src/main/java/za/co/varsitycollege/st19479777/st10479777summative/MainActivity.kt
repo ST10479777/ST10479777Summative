@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             if (title.isEmpty() || name.isEmpty() || rate.isEmpty()) {
                 Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show()
             } else {
-                val commentTxt = comments.toIntOrNull()
+                val commentTxt = rate.toIntOrNull()
                 if (commentTxt == null || commentTxt < 0 || commentTxt > 5) {
                     Toast.makeText(this, "Please enter valid rating", Toast.LENGTH_SHORT).show()
 
