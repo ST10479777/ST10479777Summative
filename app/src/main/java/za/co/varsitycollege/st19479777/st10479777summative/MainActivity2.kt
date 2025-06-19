@@ -24,7 +24,7 @@ class MainActivity2 : AppCompatActivity() {
         // allows the ratings button to work when clicked
         ratings.setOnClickListener {
             val output = StringBuilder()
-            // loops through the inputs from previous page and displays the results
+            // loops through the inputs from previous screen and displays the results
             for (i in MainActivity.song.indices) {
                 output.append("Song Title: ${MainActivity.song[i]} \n")
                 output.append("Name of Artist: ${MainActivity.artist[i]} \n")
@@ -35,6 +35,7 @@ class MainActivity2 : AppCompatActivity() {
 
             }
             display.text = output.toString()
+            // takes the user back to the main screen
             back.setOnClickListener {
                 finish()
             }

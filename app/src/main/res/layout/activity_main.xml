@@ -6,6 +6,9 @@
     android:padding="24dp"
     android:background="#FFFFFF">
 
+
+        />
+
         <EditText
             android:id="@+id/SongTitle"
             android:layout_width="match_parent"
